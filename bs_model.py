@@ -41,7 +41,7 @@ ticker = input("Enter the stock ticker symbol: ").upper()
 stock = yf.Ticker(ticker)
 
 # Get real-time stock price
-stock_info = stock.history(period="1d")
+stock_info = stock.history(period="1d", interval="1m")
 if stock_info.empty:
     print("Invalid ticker or no data available.")
     exit()
